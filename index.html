@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMART LAB</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  background: white;
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px #0001;
+}
+h1 { color: #087e8b; text-align: center; }
+p { text-align: center; color: #64748b; }
+label { display: block; margin-top: 15px; font-weight: bold; }
+input, select, textarea, button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+button {
+  background: #087e8b;
+  color: white;
+  border: 0;
+  margin-top: 22px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>SMART LAB</h1>
+  <p>نظام إدارة طلبات سحب الدم</p>
+
+  <form id="requestForm">
+    <label>الطابق</label>
+    <select required>
+      <option value="">اختر الطابق</option>
+      <option>الطابق الأول</option>
+      <option>الطابق الثاني</option>
+      <option>الطابق الثالث</option>
+      <option>الطابق الرابع</option>
+      <option>الطابق الخامس</option>
+      <option>الطابق السادس</option>
+      <option>الطابق السابع</option>
+      <option>الطابق الثامن</option>
+      <option>الطابق التاسع</option>
+      <option>الطابق العاشر</option>
+    </select>
+
+    <label>الردهة</label>
+    <select required>
+      <option value="">اختر الردهة</option>
+      <option>رجال</option>
+      <option>نساء</option>
+    </select>
+
+    <label>اسم المريض</label>
+    <input type="text" placeholder="اكتب اسم المريض" required>
+
+    <label>رقم الغرفة</label>
+    <input type="text" placeholder="رقم الغرفة" required>
+
+    <label>الأولوية</label>
+    <select required>
+      <option>اعتيادي</option>
+      <option>مستعجل</option>
+      <option>طارئ</option>
+    </select>
+
+    <label>الملاحظات</label>
+    <textarea rows="3" placeholder="ملاحظات إضافية"></textarea>
+
+    <button type="submit">إرسال طلب تجريبي</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("requestForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("تم اختبار النموذج بنجاح. هذا طلب تجريبي ولم يتم حفظه.");
+});
+</script>
+</body>
+</html>
